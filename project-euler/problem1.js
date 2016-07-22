@@ -14,14 +14,14 @@ for(var i = 1; i < limit ; i++){
     // check for numbers multiples of 3
     if(i%3 === 0){
 
-        total += i;
+        totalSum += i;
     
     // check for numbers multiples of 5
     } if(i%5 === 0){
         
-        total += i;
+        totalSum += i;
     
     }
 }
 //print out the sum
-console.log("The total sum is " +totalSum);
+document.write("The total sum is " +totalSum);
