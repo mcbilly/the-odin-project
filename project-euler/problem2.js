@@ -27,4 +27,4 @@ for(var i=1; i<100; i++){
         totalSum+=num3;
     } 
 }
-console.log(totalSum);
+document.write("The total sum of Fibonacci sequence whose values do not exceed four million is " + totalSum + ".");

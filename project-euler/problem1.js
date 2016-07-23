@@ -24,4 +24,4 @@ for(var i = 1; i < limit ; i++){
     }
 }
 //print out the sum
-document.write("The total sum is " +totalSum);
+document.write("The total sum of all numbers which are multiples of 3 or 5 below 1000 is " + totalSum + ".");
