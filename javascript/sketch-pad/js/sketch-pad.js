@@ -2,7 +2,7 @@
 
 var gridNumInt = 30; //how many initial grids of blocks
 var sketchpadWidth = 960;
-var sketchpadHeight = 800;
+var sketchpadHeight = 960;
 
 $(document).ready(function(){
 
