@@ -1,8 +1,8 @@
 /* Javascript project for Sketch Pad. The Odin Project */
 
-var gridNumInt = 16; //how many initial grids of blocks starting with 16x16
+var gridNumInt = 30; //how many initial grids of blocks
 var sketchpadWidth = 960;
-var sketchpadHeight = 600;
+var sketchpadHeight = 800;
 
 $(document).ready(function(){
 
@@ -14,10 +14,22 @@ $(document).ready(function(){
 		var newGridNum = prompt("Enter how many grids for your new sketchpad:");
 		clearSketchPad();
 		startSketchPad(newGridNum);
-		drawSketch(block);
+		drawSketch(block, 'color');
 	});
 
-	drawSketch(block);
+	$('#sketch-button').click(function(){
+		drawSketch(block, 'sketch');
+	});
+
+	$('#color-button').click(function(){
+		drawSketch(block, 'color');
+	});
+
+	$('#eraser-button').click(function(){
+		drawSketch(block, 'eraser');
+	});
+
+	drawSketch(block,'color');
 
 });
 
@@ -48,12 +60,18 @@ function clearSketchPad(){ //clear sketchpad
 	$('#sketchpad').empty();
 }
 
-function drawSketch(block){ //start drawing
+function drawSketch(block,ink){ //start drawing
 
 	$(block).hover(
 		function(){
+		if(ink === "color"){
 		var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
 		$(this).css('background-color',hue); //changes background to random color
+		} else if(ink === "sketch"){
+			$(this).css('background-color','#000000');
+		} else if(ink === "eraser"){
+			$(this).css('background-color','#ffffff');
+		}
 	},
 		function(){
 		$(this).fadeTo(1000,0.7); //on hover out, opacity fades to 0.7
