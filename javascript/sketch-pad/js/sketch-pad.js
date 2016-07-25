@@ -1,7 +1,7 @@
 /* Javascript project for Sketch Pad. The Odin Project */
 
 var gridNumInt = 16; //how many initial grids of blocks starting with 16x16
-var sketchpadWidth = 600;
+var sketchpadWidth = 960;
 var sketchpadHeight = 600;
 
 $(document).ready(function(){
@@ -41,6 +41,7 @@ function startSketchPad(gridNumInt){ //initialize sketchpad with number of grids
 
 	$('.block').css('width',blockWidth);
 	$('.block').css('height',blockHeight);
+	$('.block').css('opacity',0.1);
 };
 
 function clearSketchPad(){ //clear sketchpad
@@ -48,7 +49,14 @@ function clearSketchPad(){ //clear sketchpad
 }
 
 function drawSketch(block){ //start drawing
-	$(block).hover(function(){
-		$(this).addClass('onHover');
+
+	$(block).hover(
+		function(){
+		var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+		$(this).css('background-color',hue); //changes background to random color
+	},
+		function(){
+		$(this).fadeTo(1000,0.7); //on hover out, opacity fades to 0.7
+
 	});
 }

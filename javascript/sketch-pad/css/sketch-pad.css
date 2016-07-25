@@ -4,7 +4,7 @@
 	height: 20px;
 	padding: 5px 10px;
 	margin: 10px auto;
-	background-color: #999999;
+	background-color: #ffffff;
 	text-align: center;
 }
 
@@ -12,18 +12,14 @@
 	width: 960px;
 	height: 600px;
 	margin: 0px auto;
-	background-color: #666666;
+	background-color: #ffffff;
 }
 
 .block {
 	width: 20px;
 	height: 20px;
-	background-color: #FDFD01;
+	background-color: #dddddd;
 	border: solid 0.25px #999999;
 	float: left;
 	display: block;
-}
-
-.onHover {
-	background-color: #9EEC01;
 }
