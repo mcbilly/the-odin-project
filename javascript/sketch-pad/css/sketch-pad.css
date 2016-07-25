@@ -1,7 +1,29 @@
 /* CSS Stylesheet */
+#restart-button {
+	width: 200px;
+	height: 20px;
+	padding: 5px 10px;
+	margin: 10px auto;
+	background-color: #999999;
+	text-align: center;
+}
+
 #sketchpad {
-	width:960px;
-	height:600px;
-	margin:30px auto;
-	background-color:#666666;
+	width: 960px;
+	height: 600px;
+	margin: 0px auto;
+	background-color: #666666;
+}
+
+.block {
+	width: 20px;
+	height: 20px;
+	background-color: #FDFD01;
+	border: solid 1px #999999;
+	float: left;
+	display: block;
+}
+
+.onHover {
+	background-color: #9EEC01;
 }
