@@ -1,36 +1,46 @@
 /* Javascript project for Sketch Pad. The Odin Project */
 
 var gridNumInt = 16; //how many initial grids of blocks starting with 16x16
+var sketchpadWidth = 600;
+var sketchpadHeight = 600;
 
 $(document).ready(function(){
 
 	startSketchPad(gridNumInt);
 
-	$('button').click(function(){
+	var block = '.block'
+
+	$('#restart-button').click(function(){
 		var newGridNum = prompt("Enter how many grids for your new sketchpad:");
 		clearSketchPad();
 		startSketchPad(newGridNum);
-		drawSketch('.block');
+		drawSketch(block);
 	});
 
-	drawSketch('.block');
+	drawSketch(block);
 
 });
 
 
 function startSketchPad(gridNumInt){ //initialize sketchpad with number of grids
 
+	var $sketchpad = $('#sketchpad');
+
+	var blockWidth = (sketchpadWidth / gridNumInt)-1;
+	var blockHeight = (sketchpadHeight / gridNumInt)-1;
+
 	for(var x=0; x < gridNumInt; x++){
 
 		for(var y=0; y < gridNumInt; y++){
 	
-			$('#sketchpad').append("<div class='block'></div>");
-		
+			$sketchpad.append("<div class='block'></div>");
 		}
 
-		$('#sketchpad').append("<div style='clear:both'></div>")
+		$sketchpad.append("<div style='clear:both'></div>")
 	}
 
+	$('.block').css('width',blockWidth);
+	$('.block').css('height',blockHeight);
 };
 
 function clearSketchPad(){ //clear sketchpad

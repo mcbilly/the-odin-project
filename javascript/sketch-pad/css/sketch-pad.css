@@ -1,5 +1,5 @@
 /* CSS Stylesheet */
-#restart-button {
+#top-nav {
 	width: 200px;
 	height: 20px;
 	padding: 5px 10px;
@@ -19,7 +19,7 @@
 	width: 20px;
 	height: 20px;
 	background-color: #FDFD01;
-	border: solid 1px #999999;
+	border: solid 0.25px #999999;
 	float: left;
 	display: block;
 }
