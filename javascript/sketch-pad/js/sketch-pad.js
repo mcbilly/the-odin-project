@@ -1,6 +1,6 @@
 /* Javascript project for Sketch Pad. The Odin Project */
 
-var gridNumInt = 30; //how many initial grids of blocks
+var gridNumInt = 50; //how many initial grids of blocks
 var sketchpadWidth = 960;
 var sketchpadHeight = 960;
 
