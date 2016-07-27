@@ -16,9 +16,23 @@ def englishNumber number
 
 	teensPlace = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'ninteen']
 
-	# for million
+	# for billion
 
 	left = number
+	write = left/1000000000
+	left = left - (write * 1000000000)
+
+	if write > 0
+		billion = englishNumber write
+		numString = numString + billion + " billion"
+		
+		if left > 0
+			numString = numString + " "
+		end
+	end
+
+	# for million
+
 	write = left/1000000
 	left = left - (write * 1000000)
 
@@ -102,3 +116,5 @@ puts englishNumber(17)
 puts englishNumber(100)
 puts englishNumber(1000)
 puts englishNumber(9999999)
+puts englishNumber(12000000000)
+puts englishNumber(872345672312)
