@@ -1,13 +1,23 @@
-puts "Infinity and beyond"
+class Die
 
-input = []
+	def initialize
+		roll
+	end
 
-input.push(gets.chomp)
+	def roll
+		@numberShowing = 1 + rand(6)
+	end
 
-while input.last != ""
+	def showing
+		@numberShowing
+	end
 
-	input.push(gets.chomp)
+	def cheat number
+		@numberShowing = number
+	end
 
 end
 
-puts input.sort.join(', ')
+puts Die.new.showing
+puts Die.new.cheat(3)
+puts Die.new.cheat(4)
