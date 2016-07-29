@@ -1,23 +1,14 @@
-class Die
-
-	def initialize
-		roll
+def grandfatherClock &block
+	hoursPast = (Time.now.hour + 1)/2
+	if hoursPast > 0
+		hoursPast.times do			
+			block.call
+		end
 	end
-
-	def roll
-		@numberShowing = 1 + rand(6)
-	end
-
-	def showing
-		@numberShowing
-	end
-
-	def cheat number
-		@numberShowing = number
-	end
-
 end
 
-puts Die.new.showing
-puts Die.new.cheat(3)
-puts Die.new.cheat(4)
+grandfatherClock do 
+	puts 'DONG!'
+end
+
+puts (Time.now.hour + 1)/2
