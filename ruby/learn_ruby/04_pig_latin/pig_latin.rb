@@ -1,33 +1,35 @@
 #write your code here
 def translate(string)
 	input = string
+	sentence_output = ""
 	array_of_words = string.split(" ")
 	
-	#array_of_words.each do |word|
+	array_of_words.each do |word|
 
-		array_of_char = input.split""
+		array_of_char = word.split""
 		runOnce = false
 		consonants_before_vowel = ""
-		output = ""
+		word_output = ""
 
 		array_of_char.each_with_index do |char, index|
-			if char == 'a' || char == 'e' || char == 'i' || char == "o" || char == "u"
+			if char == 'a' || char == 'e' || char == 'i' || char == "o" || (char == "u" && word[index-1] != 'q')
 				if index == 0
 					runOnce = true
 				elsif runOnce == false
-				consonants_before_vowel = input[0...index]
+				consonants_before_vowel = word[0...index]
 				runOnce = true
 				end
 			end
-			output = output + char
+			word_output = word_output + char
 		end
 		
 		if consonants_before_vowel != ""
-				output = output[consonants_before_vowel.length,output.length]
+				word_output = word_output[consonants_before_vowel.length,word_output.length]
 		end
 		
-		output = output + consonants_before_vowel + "ay"
-	#end
+		word_output = word_output + consonants_before_vowel + "ay"
+		sentence_output = sentence_output + word_output + " "
+	end
 
-	return output
+	return sentence_output.strip
 end
