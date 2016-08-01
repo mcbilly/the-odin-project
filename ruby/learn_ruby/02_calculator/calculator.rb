@@ -1,3 +1,4 @@
+#student solution for learn_ruby from The Odin Project
 #write your code here
 def add(num1,num2)
 	return num1 + num2

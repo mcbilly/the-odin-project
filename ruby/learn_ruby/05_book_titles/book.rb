@@ -1,3 +1,4 @@
+#student solution for learn_ruby from The Odin Project
 class Book
 # write your code here
 attr_accessor :title

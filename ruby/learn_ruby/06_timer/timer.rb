@@ -1,3 +1,4 @@
+#student solution for learn_ruby from The Odin Project
 class Timer
   #write your code here
 attr_accessor :seconds, :minutes, :hours
