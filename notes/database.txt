@@ -1,0 +1,23 @@
+SQL (structured query languange)
+
+DDL (Data definition language)
+- create table
+- drop table
+
+DML (data manipulation language)
+- select
+- insert
+- delete
+- update
+
+Set Operators:
+Union (OR)
+Intersect (AND)
+Except (MINUS)
+
+inner join using(parameter)
+natural join
+outer join
+left outer join
+right outer join
+full outer join
