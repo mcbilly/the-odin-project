@@ -1,3 +1,5 @@
+Relational database and SQL
+
 SQL (structured query languange)
 
 DDL (Data definition language)
@@ -21,3 +23,4 @@ outer join
 left outer join
 right outer join
 full outer join
+
