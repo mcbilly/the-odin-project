@@ -24,3 +24,11 @@ left outer join
 right outer join
 full outer join
 
+SELECT
+FROM
+WHERE
+
+Aggregation: min, max, sum, avg, count (in SELECT)
+
+Group By
+Having
