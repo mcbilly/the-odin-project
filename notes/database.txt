@@ -28,6 +28,12 @@ SELECT
 FROM
 WHERE
 
+ORDER BY field ASC/DESC
+
+SELECT field
+FROM table_name var1, table_name var2
+WHERE var1.field = var2.field
+
 Aggregation: min, max, sum, avg, count (in SELECT)
 
 Group By
