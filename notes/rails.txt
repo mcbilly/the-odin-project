@@ -1,0 +1,11 @@
+MVC architecture
+
+Model (ActiveRecord)
+- handles data
+
+View (ActionView)
+- handles presentation
+
+Controller (ActionController)
+- handles decision
+
