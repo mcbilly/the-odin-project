@@ -9,3 +9,7 @@ View (ActionView)
 Controller (ActionController)
 - handles decision
 
+Links:
+http://guides.rubyonrails.org/getting_started.html
+http://railsapps.github.io/what-is-ruby-rails.html
+https://medium.com/how-i-learned-ruby-rails/how-i-trained-to-learn-rails-e08c94e2a51e#.j083ccvs1
