@@ -16,9 +16,9 @@ number_of_years = between_years + 1
 
 number_of_years.times do |counter|
 	current_year = starting_year.to_i + counter
-	if current_year%4==0 || current_year%400==0
-		if current_year%100!=0
+	if current_year&100!=0 and current_year%4==0
 		puts "Leap year is " + current_year.to_s
-		end
+	elsif current_year%100==0 and current_year%400==0
+		puts "Leap year is " + current_year.to_s
 	end
 end
