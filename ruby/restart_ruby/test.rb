@@ -4,12 +4,11 @@ def leapYear(num1,num2)
 
 	for i in start_year.to_i..end_year.to_i
 		if (i%100!=0) and (i%4==0)
-			puts i.to_s
+			puts "The leap year is " + i.to_s
 		elsif (i%100==0 and (i%400==0))
-			puts i.to_s
+			puts "The leap year is " + i.to_s
 		end
 	end
-
 end
 
 puts "Enter start year:"
